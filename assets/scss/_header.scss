@@ -56,6 +56,10 @@
 				font-family: $roboto;
 				padding: 38px 15px;
 				line-height: 1;
+				@media #{$lp}{
+					padding: 38px 13px;
+					font-size: 15px;
+				}
 			}
 			& .sub-menu {
 				position: absolute;
@@ -493,7 +497,8 @@
 				& > a {
 					padding: 38px 30px;
 					@media #{$lp}{
-						padding: 38px 20px;
+						padding: 38px 17px;
+						font-size: 15px;
 					}
 				}
 				& .sub-menu{
