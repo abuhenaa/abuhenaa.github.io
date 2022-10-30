@@ -1,0 +1,317 @@
+
+/*---=======================
+   13.  Start Footer css 
+===========================---*/
+
+.bebsa-footer{
+    position: relative;
+    & .shape{
+        @media #{$xs}{
+            display: none;
+        }
+        & img{
+            position: absolute;
+            bottom: 41px;
+            &.shape-1{
+                left: 0;
+            }
+            &.shape-2{
+                right: 0;
+            }
+        }
+    }
+    & .newsletter-area{
+        border-bottom: 1px solid $border-color;
+        & .section-title{
+            @media #{$xm}{
+                margin-bottom: 20px;
+            }
+        }
+        & .newsletter-form{
+            & .form_group{
+                & .form_control{
+                    background-color: $white;
+                    padding: 0 40px;
+                    border-radius: 37px;
+                    box-shadow: 0px 12px 30px 0px rgba(174, 184, 198, 0.2);
+                    height: 75px;
+                }
+                & .main-btn{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    @media #{$xs}{
+                        position: relative;
+                        top: auto;
+                        right: auto;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    & .footer-widget{
+        & .widget{
+            & h4.widget-title{
+                font-weight: 700;
+                margin-bottom: 25px;
+            }
+            &.contact-widget{
+                & .contact-info{
+                    & .single-info{
+                        margin-bottom: 21px;
+                        & .icon{
+                            min-width: 40px;
+                            max-width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $theme-color;
+                            background-color: $white;
+                            box-shadow: 0px 8px 20px 0px rgba(157, 167, 179, 0.3);
+                        }
+                        & .info{
+                            & p{
+                                line-height: 24px;
+                                @media #{$lg}{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.useful-link-widget{
+                & ul.widget-link{
+                    & li{
+                        margin-bottom: 10px;
+                        & a{
+                            font-size: 15px;
+                            @media #{$lg}{
+                                font-size: 12px;
+                            }
+                            &:before{
+                                display: inline-block;
+                                content: '--';
+                                padding-right: 5px;
+                                vertical-align: middle;
+                            }
+                            &:hover,&:focus{
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+            &.recent-news-widget{
+                & .blog-item{
+                    display: flex;
+                    & .post-thumb{
+                        min-width: 70px;
+                        max-width: 70px;
+                        height: 75px;
+                    }
+                    & .entry-content{
+                        margin-left: 15px;
+                        @media #{$lg}{
+                            margin-left: 10px;
+                        }
+                        & .post-meta{
+                            margin-bottom: 0px;
+                            & ul{
+                                & li{
+                                    line-height: 22px;
+                                    & span{
+                                        color: $theme-color;
+                                    }
+                                }
+                            }
+                        }
+                        & h3.title{
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 26px;
+                            @include transition(.3s);
+                            &:hover,&:focus{
+                                color: $theme-color;
+                            }
+                            @media #{$lg}{
+                                font-size: 11px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.instagram-widget{
+                & ul.instagram-list{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-left: -4px;
+                    margin-right: -4px;
+                    & li{
+                        padding-left: 4px;
+                        padding-right: 4px;
+                        flex: 0 0 33.33%;
+                        margin-bottom: 8px;
+                        & a{
+                            position: relative;
+                            display: block;
+                            & img{
+                                @media #{$xs}{
+                                    width: 100%;
+                                }
+                            }
+                            &:hover{
+                                & .insta-overlay{
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                            & .insta-overlay{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: $theme-color;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                visibility: hidden;
+                                opacity: 0;
+                                @include transition(.3s);
+                                & i{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .copyright-area{
+        background-color: #0e1b2c;
+        padding: 6px 0;
+        & .footer-social{
+            @media #{$xs}{
+                text-align: center;
+            }
+            & ul.social-link{
+                & li{
+                    margin-right: 25px;
+                    & a{
+                        font-size: 14px;
+                        color: $white;
+                        &:hover,&:focus{
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+        & .copyright-text{
+            float: right;
+            @media #{$xs}{
+                float: none;
+                text-align: center;
+                margin-top: 10px;
+            }
+            & p{
+                color: $white;
+            }
+        }
+    }
+    &.footer-v2{
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(14, 27, 44, 0.9);
+            z-index: -1;
+        }
+        & .newsletter-area{
+            border-color: rgba(229, 229, 229, 0.15);
+            & .newsletter-form{
+                & .section-title{
+                    & h2{
+                        color: $white;
+                    }
+                }
+                & .form_group{
+                    & .form_control{
+                        background-color: rgba(255, 255, 255, 0.15);
+                        box-shadow:none;
+                        color: $white;
+                        &::placeholder{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        & .footer-widget{
+            & .widget{
+                & h4.widget-title{
+                    color: $white;
+                }
+                &.contact-widget{
+                    & .contact-info{
+                        & .single-info{
+                            & .icon{
+                                background-color: $theme-color;
+                                box-shadow: none;
+                                color: $white;
+                            }
+                            & .info{
+                                & p{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.useful-link-widget{
+                    & ul.widget-link{
+                        & li{
+                            & a{
+                                color: $white;
+                                &:hover,&:focus{
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.recent-news-widget{
+                    & .blog-item{
+                        & .entry-content{
+                            & h3.title{
+                                color: $white;
+                                &:hover,&:focus{
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ul.social-link{
+    & li{
+        display: inline-block;
+    }
+}
+/*---=======================
+   End Footer css 
+===========================---*/

@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Bebsa HTML Template
+    Template URI: site.com
+    Description: Bebsa HTML Template
+    Author: Abu Hena
+    Author URI: site.com
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Theme default css
+	02. Header css
+    03. Hero css
+    04. About css
+    05. Service css
+    06. Features css
+    07. Portfolio css
+    08. Testimonial css
+    09. Team css
+    10. Blog css
+    11. Contact css
+    12. Footer css
+
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
+
+//--====== Default css ======--//
+@import 'common';
+
+//--====== Header css ======--//
+@import 'header';
+
+//--====== Hero css ======--//
+@import 'hero';
+
+//--====== About css ======--//
+@import 'about';
+
+//--====== Features css ======--//
+@import 'service';
+
+//--====== gallery css ======--//
+@import 'features';
+
+//--====== Testimonial css ======--//
+@import 'portfolio';
+
+//--====== Shop css ======--//
+@import 'testimonial';
+
+//--====== Team css ======--//
+@import 'team';
+
+//--====== Blog css ======--//
+@import 'shop';
+
+//--====== Blog css ======--//
+@import 'blog';
+
+//--====== Contact css ======--//
+@import 'contact';
+
+//--====== Footer css ======--//
+@import 'footer';

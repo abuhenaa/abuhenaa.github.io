@@ -1,0 +1,349 @@
+
+/*---=======================
+   09. Start Team css 
+===========================---*/
+
+.team-area-v1{
+    position: relative;
+    & #shape-1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    & #shape-2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    & .team-item{
+        position: relative;
+        padding: 0px 40px 40px;
+        @include transition(.3s);
+        z-index: 1;
+        @media #{$lg}{
+            padding: 0px 30px 40px;
+        }
+        @media #{$xss}{
+            padding: 0px 30px 40px;
+        }
+        &:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 65%;
+            background-color: $white;
+            box-shadow: 0px 12px 30px 0px rgba(174, 184, 198, 0.2);
+            z-index: -1;
+            @include transition(.3s);
+        }
+        &:hover{
+            &:after{
+                background-color: $theme-color;
+            }
+            & .team-info{
+                & h4{
+                    color: $white;
+                }
+                & p.position{
+                    color: $white;
+                }
+                & ul.social-link{
+                    & li{
+                        & a{
+                            background-color: rgba(255, 255, 255, 0.2);
+                            color: $white;
+                            &:hover,&:focus{
+                                background-color: $white;
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .team-img{
+            margin-bottom: 35px;
+            & img{
+                border-radius: 50%;
+                width: 270px;
+                height: 270px;
+                border: 10px solid  rgb(246, 246, 246);
+                @media #{$lg}{
+                    width: 230px;
+                    height: 230px;
+                }
+                @media #{$xss}{
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+        & .team-info{
+            & p.position{
+                color: $theme-color;
+                margin-bottom: 15px;
+            }
+            & ul.social-link{
+                & li{
+                    margin-left: 7px;
+                    margin-right: 7px;
+                    & a{
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        border-radius: 50%;
+                        line-height: 40px;
+                        background-color: $light-bg;
+                        color: $white;
+                        color: $heading-color;
+                        @include transition(.3s);
+                        &:hover,&:focus{
+                            background-color: $theme-color;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team-area-v2{
+    position: relative;
+    z-index: 1;
+    &:after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(14, 27, 44, 0.75);
+        z-index: -1;
+    }
+    & .team-item{
+        &:hover{
+            & .team-img{
+                & .team-overlay{
+                    visibility: visible;
+                    opacity: 1;
+                    & .team-content{
+                        @include transform(translateY(-40px));
+                    }
+                }
+            }
+            & .team-info{
+                background-color: $theme-color;
+                & h3.title,& p.position{
+                    color: $white;
+                }
+            }
+        }
+        & .team-img{
+            position: relative;
+            overflow: hidden;
+            & img{
+                width: 100%;
+            }
+            & .team-overlay{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                background-color: rgba(14, 27, 44, 0.75);
+                visibility: hidden;
+                opacity: 0;
+                @include transition(.3s);
+                & .team-content{
+                    @include transform(translateY(80px));
+                    @include transition(.3s);
+                    & ul.social-link{
+                        & li{
+                            margin-left: 5px;
+                            margin-right: 5px;
+                            & a{
+                                width: 40px;
+                                display: block;
+                                height: 40px;
+                                text-align: center;
+                                line-height: 40px;
+                                border-radius: 50%;
+                                background-color: $white;
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .team-info{
+            background-color: $white;
+            padding: 30px 25px 25px;
+            @include transition(.3s);
+            & h3.title{
+                font-size: 22px;
+                line-height: 32px;
+                font-weight: 600;
+                @media #{$lg}{
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+            & p.position{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.team-details-section{
+    & .team-item{
+        @media #{$xm}{
+            margin-bottom: 40px;
+        }
+        & .team-img{
+            & img{
+                width: 100%;
+            }
+        }
+        & .team-info{
+            background-color: $white;
+            padding: 30px 30px 40px;
+            @media #{$lg}{
+                padding: 30px 15px 40px;
+            }
+            @media #{$xm}{
+                padding: 30px 15px 40px;
+            }
+            & h4{
+                font-weight: 600;
+            }
+            & p.position{
+                color: $theme-color;
+                margin-bottom: 23px;
+            }
+            & ul.social-link{
+                & li{
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    & a{
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                        border-radius: 50%;
+                        color: $white;
+                        background-color: $theme-color;
+                        &.facebook{
+                            background-color: #395197;
+                        }
+                        &.twitter{
+                            background-color: #00a8ff;
+                        }
+                        &.linkedin{
+                            background-color: #3d83d9;
+                        }
+                        &.pinterest{
+                            background-color: #d40c17;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .team-details-wrapper{
+        & .box{
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 33px;
+            &:last-child{
+                margin-bottom: 0px;
+                border-bottom: none;
+                padding-bottom: 0px;
+            }
+            & h3.title{
+                margin-bottom: 17px;
+                @media #{$xm}{
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+            & p{
+                margin-bottom: 20px;
+            }
+            &.bio-box{
+                & p{
+                    margin-bottom: 5px;
+                    @media #{$lg}{
+                        font-size: 14px;
+                    }
+                    @media #{$xs}{
+                        font-size: 14px;
+                    }
+                    & span{
+                        margin-right: 35px;
+                        font-weight: 600;
+                        color: $heading-color;
+                        @media #{$lg}{
+                            margin-right: 10px;
+                        }
+                        @media #{$xs}{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            &.expertise-box{
+                & .expertise-item{
+                    background-color: $white;
+                    padding: 30px;
+                    @media #{$xm}{
+                        margin-bottom: 40px;
+                    }
+                    & .icon{
+                        margin-bottom: 15px;
+                        & i{
+                            color: $theme-color;
+                            width: 40px;
+                            height: 40px;
+                            line-height: 1;
+                            font-size: 40px;
+                        }
+                    }
+                    & .info{
+                        & h5{
+                            font-weight: 600;
+                            line-height: 28px;
+                            @media #{$lg}{
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.contact-box{
+                & .form_group{
+                    margin-bottom: 30px;
+                    & textarea.form_control{
+                        height: 150px;
+                        padding-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*---=======================
+   End Team css 
+===========================---*/

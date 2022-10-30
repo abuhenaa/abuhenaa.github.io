@@ -1,0 +1,103 @@
+
+
+/*---=======================
+   11. Start Contact css 
+===========================---*/
+
+.contact-area-section{
+    &.contact-area-v1{
+        & .contact-form{
+            & .form_group{
+                & .form_control{
+                    border: 1px solid #e1e1e1;
+                    &:focus{
+                        border-color: $theme-color;
+                    }
+                }
+                & .nice-select{
+                    border: 1px solid #e1e1e1;
+                }
+            }
+        }
+    }
+    & .contact-form{
+        & .form_group{
+            & .form_control{
+                height: 55px;
+                background-color: $white;
+                margin-bottom: 30px;
+                padding: 0 20px;
+            }
+            & i{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            & textarea.form_control{
+                height: 200px;
+                padding-top: 15px;
+            }
+            & .nice-select{
+                height: 55px;
+                line-height: 55px;
+                padding: 0 30px;
+                border: none;
+                background-color: $white;
+                margin-bottom: 30px;
+                border-radius: 0px;
+            }
+        }
+    }
+    & .contact-info-wrapper{
+        padding-top: 160px;
+        position: relative;
+        margin-bottom: -180px;
+        @media #{$xm}{
+            margin-bottom: 0px;
+            padding-top: 120px;
+        }
+        & .info-box {
+            padding: 0 70px 50px;
+            background-color: $white;
+            box-shadow: 0px 20px 25px 0px rgba(197, 197, 197, 0.35);
+            @media #{$xm}{
+                margin-bottom: 80px;
+            }
+            & .icon{
+                margin-bottom: 55px;
+                & i{
+                    width: 80px;
+                    height: 80px;
+                    background-color: $theme-color;
+                    text-align: center;
+                    font-size: 30px;
+                    line-height: 80px;
+                    color: $white;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-top: -55px;
+                }
+            }
+            & .info{
+                & h4{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}  
+
+.contact-map-section{
+    & .map_box{
+        & iframe{
+            border: none;
+            display: inherit;
+            width: 100%;
+            height: 550px;
+        }
+    }
+}
+
+/*---=======================
+   End Contact css 
+===========================---*/
